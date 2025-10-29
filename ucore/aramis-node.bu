@@ -48,7 +48,7 @@ systemd:
         [Service]
         Type=oneshot
         RemainAfterExit=yes
-        ExecStart=/usr/bin/rpm-ostree rebase --reboot ostree-unverified-registry:ghcr.io/ublue-os/ucore-minimal:stable-zfs
+        ExecStart=/usr/bin/rpm-ostree rebase --reboot ostree-unverified-registry:ghcr.io/ublue-os/ucore-hci:stable
         ExecStart=/usr/bin/touch /var/lib/rpm-ostree-rebase-to-ucore.stamp
 
         [Install]
@@ -68,19 +68,3 @@ systemd:
 
         [Install]
         WantedBy=sockets.target
-    - name: zfs-load.service
-      enabled: true
-      contents: |
-        [Unit]
-        Description=Load ZFS kernel module
-        DefaultDependencies=false
-        After=systemd-modules-load.service
-        Before=zfs-mount.service
-
-        [Service]
-        Type=oneshot
-        RemainAfterExit=yes
-        ExecStart=/usr/sbin/modprobe zfs
-
-        [Install]
-        WantedBy=sysinit.target
