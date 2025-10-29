@@ -12,7 +12,7 @@
         ],
         "name": "core",
         "sshAuthorizedKeys": [
-          "ssh-ed25519 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDr79KFS1eT4kZR81WEeU2qthBH8AkBAm2IW+qvvxOmk cavs"
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDr79KFS1eT4kZR81WEeU2qthBH8AkBAm2IW+qvvxOmk cavs"
         ]
       }
     ]
