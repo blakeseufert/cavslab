@@ -68,3 +68,15 @@ systemd:
 
         [Install]
         WantedBy=sockets.target
+    - name: glusterd.service
+      enabled: true
+    - name: cockpit.socket # <--- Enables Cockpit to listen on port 9090
+      enabled: true
+
+rpm-ostree:
+  install:
+    - glusterfs
+    - glusterfs-cli
+    - glusterfs-server
+    - cockpit-gluster
+    - btop
