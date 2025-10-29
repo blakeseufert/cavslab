@@ -4,7 +4,7 @@ passwd:
   users:
     - name: core
       ssh_authorized_keys:
-        - ssh-ed25519 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDr79KFS1eT4kZR81WEeU2qthBH8AkBAm2IW+qvvxOmk cavs
+        - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDr79KFS1eT4kZR81WEeU2qthBH8AkBAm2IW+qvvxOmk cavs
       groups:
         - wheel
         - sudo
