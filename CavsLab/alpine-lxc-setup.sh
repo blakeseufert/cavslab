@@ -30,7 +30,6 @@ apk add btop || true
 apk add nano || true 
 apk add openssh || true
 apk add util-linux || true 
-apk add curl || true 
 apk add docker-cli-compose || true
 apk add neofetch || true
 
