@@ -75,5 +75,3 @@ echo -e "${YELLOW}
 - Reboot
 ✅ Done! ${NC}
 "
-
-sleep 1
