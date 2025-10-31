@@ -61,6 +61,9 @@ echo 'TAILSCALED_OPTS="--tun=userspace-networking"' >> /etc/conf.d/tailscale
 echo -e "
 ---${YELLOW}Starting Tailscale interactive setup...${NC}
 " 
+echo "Waiting for 5 seconds for tailscale..."
+sleep 5
+
 tailscale up --ssh --force-reauth
 
 echo -e "${YELLOW} 
