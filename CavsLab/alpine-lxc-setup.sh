@@ -69,6 +69,7 @@ echo -e "${YELLOW}
 - Connect Tailscale (above URL)
 - Connect cephfs share as a mountpoint for the LXC on proxmox
   - pct set [[CTID eg:100]] -mp0 /mnt/pve/cephfs/docker,mp=/dockerdata,shared=1
+- Setup Swarm
 - Reboot
 ✅ Done! ${NC}
 "
