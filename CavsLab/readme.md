@@ -4,7 +4,6 @@ Setup LXC on Alpine:
 apk add curl
 curl -fsSL https://raw.githubusercontent.com/blakeseufert/homelab/refs/heads/main/CavsLab/alpine-lxc-setup.sh | sh
 
-
 ```
 
 ----
