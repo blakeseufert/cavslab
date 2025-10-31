@@ -33,7 +33,7 @@ pct set [[CTID eg:100]] -mp0 /mnt/pve/cephfs/docker,mp=/dockerdata,shared=1
 
 ```
 apk add curl
-curl -fsSL hhttps://raw.githubusercontent.com/blakeseufert/cavslab/refs/heads/main/alpinelxc-setup/alpinelxc-setup.sh | sh
+curl -fsSL https://raw.githubusercontent.com/blakeseufert/cavslab/refs/heads/main/alpinelxc-setup/alpinelxc-setup.sh | sh
 
 ```
 
