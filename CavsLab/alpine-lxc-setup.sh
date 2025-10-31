@@ -62,7 +62,7 @@ echo 'TAILSCALED_OPTS="--tun=userspace-networking"' >> /etc/conf.d/tailscale
 echo -e "
 ---${YELLOW}Starting Tailscale interactive setup...${NC}
 " 
-tailscale up
+tailscale up --ssh --force-reauth
 
 echo -e "${YELLOW} 
 * Remember to: 
