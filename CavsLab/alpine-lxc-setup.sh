@@ -31,7 +31,6 @@ apk add nano || true
 apk add openssh || true
 apk add util-linux || true 
 apk add docker-cli-compose || true
-apk add neofetch || true
 
 # ---
 # Configure Services to Start at Boot (OpenRC)
@@ -41,18 +40,6 @@ echo -e "
 ${YELLOW}---Enabling services to start at boot (docker, tailscale, sshd)...${NC}
 " 
 
-# 1. Enable and start the Docker service
-rc-update add docker default
-rc-service docker start
-
-# 2. Enable and start the SSH daemon
-rc-update add sshd default
-rc-service sshd start
-
-# 3. Enable the Tailscale service to run at boot
-rc-update add tailscale default
-rc-service tailscale start
-
 # This Tailscale setup process.
 echo -e "${YELLOW}
 ---Setup Tailscale tun userspace-networking...${NC}
@@ -61,8 +48,18 @@ echo 'TAILSCALED_OPTS="--tun=userspace-networking"' >> /etc/conf.d/tailscale
 echo -e "
 ---${YELLOW}Starting Tailscale interactive setup...${NC}
 " 
-echo "Waiting for 5 seconds for tailscale..."
-sleep 5
+# Enable and start the Docker service
+rc-update add docker default
+rc-service docker start
+
+# Enable and start the SSH daemon
+rc-update add sshd default
+rc-service sshd start
+
+# Enable the Tailscale service to run at boot
+rc-update add tailscale default
+rc-service tailscale start
+
 
 tailscale up --ssh --force-reauth
 
