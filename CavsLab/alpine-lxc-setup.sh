@@ -58,7 +58,7 @@ rc-service tailscale start
 echo -e "${YELLOW}
 ---Setup Tailscale tun userspace-networking...${NC}
 " 
-/usr/sbin/tailscaled --tun=userspace-networking
+echo 'TAILSCALED_OPTS="--tun=userspace-networking"' >> /etc/conf.d/tailscale
 echo -e "
 ---${YELLOW}Starting Tailscale interactive setup...${NC}
 " 
