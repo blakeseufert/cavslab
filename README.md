@@ -21,10 +21,16 @@
 - Use Alpine latest. 3.22 has been tested as working.
 - Add disk to cephpool @ 100gb size
 - Network set DHCP
+- Once created, edit the config eg: /etc/pve/lxc/[112].conf
+- Add:
+```
+lxc.cgroup2.devices.allow: c 10:200 rwm
+lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
+```
 *Leave all other as defaults where possible*
 
 
-#### 2. Run this on proxmox host referencing the new LXC ID:
+#### 2. Add cephfs to LXC on proxmox host referencing the new LXC ID:
 ```
 pct set [[CTID eg:100]] -mp0 /mnt/pve/cephfs/docker,mp=/dockerdata,shared=1
 
