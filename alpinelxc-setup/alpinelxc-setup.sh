@@ -41,10 +41,10 @@ ${YELLOW}---Enabling services to start at boot (docker, tailscale, sshd)...${NC}
 " 
 
 # This Tailscale setup process.
-echo -e "${YELLOW}
----Setup Tailscale tun userspace-networking...${NC}
-" 
-echo 'TAILSCALED_OPTS="--tun=userspace-networking"' >> /etc/conf.d/tailscale
+#echo -e "${YELLOW}
+#---Setup Tailscale tun userspace-networking...${NC}
+#" 
+#echo 'TAILSCALED_OPTS="--tun=userspace-networking"' >> /etc/conf.d/tailscale
 echo -e "
 ---${YELLOW}Starting Tailscale interactive setup...${NC}
 " 
