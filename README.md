@@ -16,7 +16,7 @@
 
 #### 1. Setup for LXC container  
 - Use 90+% of host resources (cpu, mem, disk). 
-- Naming convention is [uniquenamne]-[px-hostname]. This is because these containers never to HA as swarm does this for us.
+- Naming convention is [uniquenamne]-[px-hostname].
 - no SSH key (use tailscale for this)
 - Use Alpine latest. 3.22 has been tested as working.
 - Add disk to cephpool @ 100gb size
