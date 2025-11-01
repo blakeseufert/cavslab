@@ -21,8 +21,7 @@
 - Use Alpine latest. 3.22 has been tested as working.
 - Add disk to cephpool @ 100gb size
 - Network set DHCP
-- Once created, edit the config eg: /etc/pve/lxc/[112].conf
-- Add:
+- Once created, edit the config eg: /etc/pve/lxc/[112].conf and add:
 ```
 lxc.cgroup2.devices.allow: c 10:200 rwm
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
